@@ -1,137 +1,57 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hacked By Rapz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRANK TOMBOL OK</title>
   <style>
     body {
-      margin: 0;
-      background: #000;
-      color: white;
-      font-family: 'Courier New', monospace;
+      background: #111;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 20px;
-    }.logo {
-  width: 180px;
-  margin-top: 40px;
-}
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-h1 {
-  font-size: 26px;
-  margin: 10px 0 0;
-  color: white;
-}
+    h1 {
+      margin-bottom: 20px;
+    }
 
-h2 {
-  color: red;
-  font-style: italic;
-  margin: 5px 0 20px;
-}
+    button {
+      background: #ff0077;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
 
-audio {
-  margin: 10px 0 25px;
-  width: 280px;
-  display: none;
-}
-
-.box {
-  border: 1px solid white;
-  padding: 20px;
-  width: 95%;
-  max-width: 500px;
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.box h3 {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.box p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #ddd;
-}
-
-.box a {
-  color: #33ccff;
-  text-decoration: none;
-  display: block;
-  margin: 4px 0;
-}
-
-.box a:hover {
-  text-decoration: underline;
-}
-
-.exit-info {
-  margin-top: 30px;
-  color: orange;
-  font-size: 15px;
-  text-align: center;
-  max-width: 500px;
-}
-
+    button:hover {
+      background: #ff3399;
+    }
   </style>
 </head>
-<body oncontextmenu="return false" onkeydown="return false">  <img src="https://files.catbox.moe/3sjkm6.jpg" alt="logo" class="logo">
-  <h1>Hacked By ./Rapz - Ploit</h1>
-  <h2>RapZ - HACKING</h2>  <!-- 🔊 Sound dari Catbox -->  <audio id="sound" loop>
+<body>
+
+  <h1>Klik tombol OK buat lanjut</h1>
+  <button onclick="playSound()">OK</button>
+
+  <audio id="prankSound">
     <source src="https://files.catbox.moe/2r382n.mp3" type="audio/mpeg">
-  </audio>  <!-- Box Peringatan -->  <div class="box">
-    <h3>SITUS INI TELAH DI AMBIL ALIH OLEH CYBER103</h3>
-    <p>
-      AKU SUDAH MEMBERIKAN WAKTU KU SEPENUHNYA UNTUKMU<br>
-      MENGAPA KAMU TIDAK PERNAH ADA WAKTU UNTUK KU,<br>
-      Hurt man Website Been Take dwon by rapz72
-    </p>
-    <p>informasi lebih lanjut :</p>
-    <a href="#">WOLF CYBER CT TIKTOK</a>
-    <a href="#">WOLF CYBER CT TEAM</a>
-  </div>  <!-- Info Keluar -->  <div class="exit-info">
-    <p>⚠️ Jika ingin keluar dan mengembalikan data Anda,<br>
-    silakan tekan tombol "Kembali" di browser Anda.<br>
-    Tapi kami tidak menjamin apa pun... 😈</p>
-  </div>  <script>
-    // Blok tombol back
-    history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-      history.go(1);
-    };
+    
+  </audio>
 
-    // Blok keluar halaman
-    window.onbeforeunload = function () {
-      return "\u26a0 Sistem masih aktif! Jangan keluar!";
-    };
-
-    // Paksa suara play setelah konfirmasi OK
-    const sound = document.getElementById('sound');
-    sound.volume = 1;
-
-    function startSound() {
-      sound.play().catch(() => {});
+  <script>
+    function playSound() {
+      const audio = document.getElementById("prankSound");
+      audio.play();
     }
+  </script>
 
-    // Tampilkan alert awal, lalu nyalakan suara setelah pencet OK
-    window.onload = function() {
-      setTimeout(() => {
-        if (confirm("\u26a0 Anda akan terhubung ke sistem kontrol. Lanjutkan?")) {
-          sound.style.display = "block";
-          startSound();
-
-          // Popup palsu otomatis
-          setTimeout(() => alert("\u26a0 Sistem tidak bisa dipulihkan!"), 4000);
-          setTimeout(() => alert("\ud83d\udce1 Lokasi kamu sudah terlacak"), 8000);
-          setTimeout(() => alert("\ud83d\udd10 Semua file telah dienkripsi!"), 12000);
-        }
-      }, 1000);
-    }
-  </script></body>
+</body>
 </html>
